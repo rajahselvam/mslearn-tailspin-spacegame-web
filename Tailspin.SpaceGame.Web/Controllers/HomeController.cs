@@ -84,7 +84,7 @@ namespace TailSpin.SpaceGame.Web.Controllers
                 {
                     vm.PrevLink = $"/?page={page - 1}&pageSize={pageSize}&mode={mode}&region={region}#leaderboard";
                 }
-                if (vm.TotalResults > page * pageSize)
+                if (vm.TotalResults >= page * pageSize)
                 {
                     vm.NextLink = $"/?page={page + 1}&pageSize={pageSize}&mode={mode}&region={region}#leaderboard";
                 }
